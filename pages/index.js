@@ -1,26 +1,14 @@
-// const DynamicComponentWithNoSSR = dynamic(
-//   () => import("../components/image-editor"),
-//   { ssr: false }
-// );
-// export default function Home(props) {
-//   return (
-//     <div className="container">
-//       <Head>
-//         <title>Create Next App</title>
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
+import dynamic from "next/dynamic";
 
-//       <main>
-//         <DynamicComponentWithNoSSR />
-//       </main>
-//     </div>
-//   );
-// }
-
-import dynamic from 'next/dynamic'
 const DynamicComponentWithNoSSR = dynamic(
   () => import("../components/image-editor"),
   { ssr: false }
 );
-const Home = () => <DynamicComponentWithNoSSR />;
+
+const Home = () => (
+  <div style={{width: '1000%', height: "100vh", display: "flex", justifyContent: 'center', alignItems: 'center', backgroundColor: '#000'}}>
+    <DynamicComponentWithNoSSR />
+  </div>
+);
+
 export default Home;
