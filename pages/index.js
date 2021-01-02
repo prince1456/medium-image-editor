@@ -6,7 +6,16 @@ const DynamicComponentWithNoSSR = dynamic(
 );
 
 const Home = () => (
-  <div style={{width: '1000%', height: "100vh", display: "flex", justifyContent: 'center', alignItems: 'center', backgroundColor: '#000'}}>
+  <div
+    style={{
+      width: "100vw",
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#000",
+    }}
+  >
     <DynamicComponentWithNoSSR />
   </div>
 );
